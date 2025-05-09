@@ -24,10 +24,21 @@
       margin-bottom: 0.3em;
       text-shadow: 2px 2px 0 #fff;
     }
-    h2 {
-      margin-top: 2em;
-      font-size: 2.2em;
-      color: #e65100;
+    .btn, button {
+      background: #0077ff;
+      color: white;
+      padding: 14px 28px;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.4em;
+      cursor: pointer;
+      text-decoration: none;
+      margin: 15px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+      transition: transform 0.2s;
+    }
+    button:hover, .btn:hover {
+      transform: scale(1.05);
     }
     .contract {
       font-family: monospace;
@@ -38,23 +49,6 @@
       display: inline-block;
       margin: 10px 0;
       color: #000;
-    }
-    .btn {
-      background: #0077ff;
-      color: white;
-      padding: 14px 28px;
-      border: none;
-      border-radius: 30px;
-      font-size: 1.4em;
-      cursor: pointer;
-      text-decoration: none;
-      display: inline-block;
-      margin: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.2);
-      transition: transform 0.2s;
-    }
-    .btn:hover {
-      transform: scale(1.05);
     }
     .section {
       margin-top: 50px;
@@ -70,7 +64,9 @@
   </style>
 </head>
 <body>
-  <audio autoplay>
+
+  <button onclick="document.getElementById('bg-audio').play()">🔊 Reproducir audio</button>
+  <audio id="bg-audio">
     <source src="assets/panapa-fragment.mp3" type="audio/mpeg">
   </audio>
 
@@ -107,5 +103,6 @@
   <div class="section">
     <p style="font-size: 1.1em;"><em>Disclaimer: Not financial advice. But if it makes you laugh and moon, amen.</em></p>
   </div>
+
 </body>
 </html>
